@@ -58,10 +58,10 @@ proc initSigilDisplay(time: string): SigilDisplay =
 proc draw(sigilDisplay: SigilDisplay) =
   for idx in 0 ..< sigilDisplay.len:
     echo " "
-  terminal.cursorUp(3)
+  terminal.cursorUp(sigilDisplay.len)
   for row in sigilDisplay:
     echo "\r" & row
-  terminal.cursorUp(3)
+  terminal.cursorUp(sigilDisplay.len)
  
 when isMainModule:
   while true:
